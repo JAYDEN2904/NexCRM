@@ -1,0 +1,120 @@
+import { TeamMember, TaskAssignment, CalendarEvent } from '@/types/team'
+
+export const mockTeamMembers: TeamMember[] = [
+  {
+    id: '1',
+    name: 'John Smith',
+    email: 'john.smith@company.com',
+    role: 'Senior Developer',
+    department: 'Engineering',
+    status: 'active',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John',
+    performance: {
+      tasksCompleted: 45,
+      tasksInProgress: 3,
+      averageCompletionTime: 2.5,
+      qualityScore: 4.8,
+    },
+    skills: ['React', 'TypeScript', 'Node.js', 'AWS'],
+    availability: {
+      startTime: '09:00',
+      endTime: '17:00',
+      timezone: 'America/New_York',
+    },
+  },
+  {
+    id: '2',
+    name: 'Sarah Johnson',
+    email: 'sarah.j@company.com',
+    role: 'Product Manager',
+    department: 'Product',
+    status: 'active',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah',
+    performance: {
+      tasksCompleted: 38,
+      tasksInProgress: 2,
+      averageCompletionTime: 3.2,
+      qualityScore: 4.9,
+    },
+    skills: ['Product Strategy', 'Agile', 'User Research', 'Data Analysis'],
+    availability: {
+      startTime: '08:30',
+      endTime: '16:30',
+      timezone: 'America/New_York',
+    },
+  },
+  {
+    id: '3',
+    name: 'Michael Chen',
+    email: 'michael.c@company.com',
+    role: 'UX Designer',
+    department: 'Design',
+    status: 'active',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Michael',
+    performance: {
+      tasksCompleted: 42,
+      tasksInProgress: 4,
+      averageCompletionTime: 2.8,
+      qualityScore: 4.7,
+    },
+    skills: ['UI/UX Design', 'Figma', 'User Testing', 'Prototyping'],
+    availability: {
+      startTime: '09:30',
+      endTime: '17:30',
+      timezone: 'America/New_York',
+    },
+  },
+]
+
+export const mockTaskAssignments: TaskAssignment[] = [
+  {
+    id: '1',
+    title: 'Implement User Authentication',
+    description: 'Set up authentication system with JWT and refresh tokens',
+    assignedTo: '1',
+    assignedBy: '2',
+    dueDate: new Date('2024-04-15'),
+    priority: 'high',
+    status: 'in_progress',
+    estimatedHours: 16,
+    actualHours: 12,
+    tags: ['frontend', 'security', 'authentication'],
+  },
+  {
+    id: '2',
+    title: 'Design Dashboard Layout',
+    description: 'Create new dashboard layout with improved navigation',
+    assignedTo: '3',
+    assignedBy: '2',
+    dueDate: new Date('2024-04-20'),
+    priority: 'medium',
+    status: 'todo',
+    estimatedHours: 12,
+    tags: ['design', 'ui', 'dashboard'],
+  },
+]
+
+export const mockCalendarEvents: CalendarEvent[] = [
+  {
+    id: '1',
+    title: 'Weekly Team Meeting',
+    description: 'Discuss project progress and upcoming tasks',
+    start: new Date('2024-04-10T10:00:00'),
+    end: new Date('2024-04-10T11:00:00'),
+    type: 'meeting',
+    attendees: ['1', '2', '3'],
+    location: 'Conference Room A',
+    status: 'scheduled',
+  },
+  {
+    id: '2',
+    title: 'Design Review',
+    description: 'Review new dashboard design concepts',
+    start: new Date('2024-04-12T14:00:00'),
+    end: new Date('2024-04-12T15:30:00'),
+    type: 'meeting',
+    attendees: ['2', '3'],
+    location: 'Design Studio',
+    status: 'scheduled',
+  },
+] 
